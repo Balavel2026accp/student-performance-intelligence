@@ -4,6 +4,12 @@ from logging.config import fileConfig
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
+# Import model modules so their tables register with Base.metadata.
+import app.models.academic_year
+import app.models.exam_result
+import app.models.student
+import app.models.subject
+import app.models.user
 from app.core.config import settings
 from app.db.base import Base
 

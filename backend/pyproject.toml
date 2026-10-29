@@ -1,0 +1,18 @@
+[project]
+name = "student-performance-intelligence-api"
+version = "0.1.0"
+description = "Academic performance analytics API"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic-settings",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

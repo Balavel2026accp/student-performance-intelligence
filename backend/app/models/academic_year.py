@@ -1,4 +1,3 @@
-
 from datetime import date
 
 from sqlalchemy import Boolean, CheckConstraint, Date, Integer, String
@@ -17,14 +16,8 @@ class AcademicYear(Base):
         ),
     )
 
-    academic_year_id: Mapped[int] = mapped_column(
-        Integer, primary_key=True
-    )
-    year_name: Mapped[str] = mapped_column(
-        String(20), unique=True, nullable=False
-    )
+    academic_year_id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    year_name: Mapped[str] = mapped_column(String(20), unique=True, nullable=False)
     start_date: Mapped[date] = mapped_column(Date, nullable=False)
     end_date: Mapped[date] = mapped_column(Date, nullable=False)
-    is_current: Mapped[bool] = mapped_column(
-        Boolean, nullable=False, default=False
-    )
+    is_current: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)

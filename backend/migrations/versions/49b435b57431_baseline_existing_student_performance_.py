@@ -1,4 +1,3 @@
-
 """Baseline existing student performance schema.
 
 Revision ID: 49b435b57431
@@ -13,9 +12,7 @@ depends_on = None
 
 def upgrade() -> None:
     """Record the existing schema baseline without changing tables."""
-    pass
 
 
 def downgrade() -> None:
     """Keep the existing schema and data intact."""
-    pass
